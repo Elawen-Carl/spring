@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="admin" class="com.czklps.bean.Admin">
+        <property name="name" value="波波哥"></property>
+        <property name="address" value="湖南"></property>
+        <property name="user" >
+            <bean id="user" class="com.czklps.bean.User">
+                <property name="name" value="鸡哥"></property>
+                <property name="address" value="波波山"></property>
+            </bean>
+        </property>
+    </bean>
+</beans>

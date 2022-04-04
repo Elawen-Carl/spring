@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="objectTest" class="com.czklps.bean.ObjectTest">
+        <property name="admins">
+            <list>
+                <ref bean="admin"></ref>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="波波哥" value="帅粉了"></entry>
+                <entry key="奈奈" value="帅粉了"></entry>
+            </map>
+        </property>
+        <property name="strings">
+            <array>
+                <value>小波</value>
+                <value>小奈</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="admin" class="com.czklps.bean.Admin">
+        <property name="name" value="波波哥"></property>
+        <property name="address" value="波波山"></property>
+        <property name="user" ref="user"></property>
+    </bean>
+    <bean id="user" class="com.czklps.bean.User">
+        <property name="name" value="乃乃"></property>
+        <property name="address" value="奶奶山"></property>
+    </bean>
+</beans>

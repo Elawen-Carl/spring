@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.czklps.bean.User"></bean>
+
+    <bean id="user2" class="com.czklps.bean.User">
+        <constructor-arg name="name" value="波波哥"></constructor-arg>
+    </bean>
+
+    <bean id="user3" class="com.czklps.bean.User">
+        <property name="name" value="小了"></property>
+        <property name="address">
+            <value><![CDATA[<<家里蹲大学>>]]></value>
+        </property>
+    </bean>
+
+    <!--2 set方法注入属性-->
+    <bean id="user4" class="com.czklps.bean.User" p:name="九阳神功" p:address="无名氏"></bean>
+
+</beans>
